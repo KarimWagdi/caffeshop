@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-md  ">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img id="logo" src="../../../assets/—Pngtree—logos of coffee best drink_8532367.png" alt="" srcset="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item " routerLinkActive="active" routerLink="">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <a class="nav-link text-white" >Home</a>
+                </li>
+             
+                <li class="nav-item " routerLinkActive="active" routerLink="order">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <a class="nav-link text-white" >Products</a>
+                </li>
+                <li class="nav-item " routerLinkActive="active" routerLink="cart"> 
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <a class="nav-link text-white" >Cart</a>
+                </li>
+                <li class="nav-item " routerLinkActive="active" routerLink="orders">
+                    <i class="fa-solid fa-pen-nib"></i>
+                      <a class="nav-link text-white" >Orders</a>
+                   </li>
+
+                <li class="nav-item " routerLinkActive="active" routerLink="allProducts">
+                    <i class="fa-solid fa-table-list"></i>
+                    <a class="nav-link text-white" >All Product</a>
+                </li>
+                <li class="nav-item " routerLinkActive="active" routerLink="addProduct">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                    <a class="nav-link text-white" >Add Product</a>
+                </li>
+                <li class="nav-item " routerLinkActive="active" routerLink="users">
+                    <i class="fa-sharp fa-solid fa-users"></i>
+                    <a class="nav-link text-white" >Users</a>
+                </li>
+                
+                <li>
+                    <button type="button" class="btn btn-primary btn-block mb-4"  routerLink="/logout" (click)="logout()">Log Out</button>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

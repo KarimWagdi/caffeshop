@@ -1,0 +1,20 @@
+<h1 class="text-white">All Users</h1>
+<table class="table text-white" style="background-color: rgba(0, 0, 0, 0.7); border-width: 4px;">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Room</th>
+        <th scope="col">Email</th>
+        <th scope="col">img</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of finalUser">
+        <td>{{user.name}}</td>
+        <td>{{user.room}}</td>
+        <td>{{user.email}}</td>
+        <td> <img  id="userImg"src="{{user.imgURL}}" alt=""> </td>
+
+      </tr>
+    </tbody>
+  </table>

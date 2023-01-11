@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #ff000000;
+}
+
+.navbar .nav-item {
+    text-align: center;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    margin-left: 4rem;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.navbar .nav-item i {
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 1rem;
+}
+
+#logo {
+    width: 150px;
+}

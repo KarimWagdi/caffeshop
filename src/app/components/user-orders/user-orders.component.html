@@ -1,0 +1,33 @@
+<div class="container px-3 my-5 clearfix">
+    <div class="card" style="background-color: rgba(0, 0, 0, 0.7);">
+        <div class="card-header text-white">
+            <h2> My Orders (For User)</h2>
+        </div>
+        <div class="card-body text-white">
+            <div class="table-responsive">
+                <table class="table table-bordered m-0 text-white">
+                    <thead>
+                        <tr>
+                            <th class="text-center py-3 px-4" style="width: 250px;">Order Date</th>
+                            <th class="text-center py-3 px-4" style="width: 100px;">Status</th>
+                            <th class="text-center py-3 px-4" style="width: 120px;">Amount</th>
+                            <th class="text-center py-3 px-4" style="width: 50px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-4 text-center">
+                                <h6>{{fullOrder.ordDate | date : "short"}}</h6>
+                            </td>
+                            <td class="text-center">In progress</td>
+                            <td class="text-center">{{fullOrder.ordTotal | currency : "EGP"}}</td>
+                            <td class="text-center"><button class="btn btn-danger"
+                                    (click)="cancelOrder()">cancel</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<h2 class="text-white">User Order</h2>
+
+<div class="container">
+    <label for="" class="text-white" >Category</label>
+    <select class="form-select mb-3 text-white" style="background-color: rgba(0, 0, 0, 0.7);" [(ngModel)]="ParentSelectedCategoryID">
+        <option selected value="0">All</option>
+        <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>
+    </select>
+
+</div>
+<hr>
+
+<app-products [selectedCatIDchild]="ParentSelectedCategoryID" (item)="addToCart($event)"></app-products>
+
+<hr>
+
+<app-cart></app-cart>

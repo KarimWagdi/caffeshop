@@ -1,0 +1,71 @@
+<!-- /////////////////////////////////////// -->
+<section id="addProducts">
+  <section #successBox id="success">
+
+    <div class="container">
+      <i class="fa-solid fa-circle-xmark" (click)="close()"></i>
+      <img id="successIcon" src="../../../assets/success-icon.png" alt="">
+      <h4>Done</h4> <br>
+      <p>Product Added Successfully To The Caftrya List</p>
+    </div>
+
+  </section>
+
+  <h2>Add Product</h2>
+
+  <form [formGroup]="form" action="" method="post" style="background-color: rgba(0, 0, 0, 0.7);">
+    <table >
+      <table >
+
+        <tr>
+          <td>
+            <label class="form-label" for="productName">Product Name</label>
+          </td>
+          <td>
+            <input formControlName="name"  type="text" id="productName" class="form-control" />
+          </td>
+        </tr>
+        <!-- //// -->
+        <tr>
+          <td>
+            <label class="form-label" for="productPrice">Product Price</label>
+          </td>
+          <td>
+            <input formControlName="price"  type="number" id="productPrice" class="form-control" />
+          </td>
+        </tr>
+        <!-- //// -->
+
+        <tr>
+          <td>
+            <label class="form-label" for="productCategory">Product category</label>
+          </td>
+          <td>   
+            <select formControlName="categoryID" >
+              <option value="1">Hot Drinks</option>
+              <option value="2">Juices</option>
+              <option value="3">Soda</option>
+            </select>
+          </td>
+        </tr>
+
+        <!-- //// -->
+        <tr>
+          <td>
+            <label class="form-label" for="form2Example1">Product Picture</label>
+          </td>
+          <td>
+            <!-- <img id="imgProd" src="{{base64}}" alt=""> -->
+            <input type="file" name="" id="productImg"(change)="getImgPath($event)">
+          </td>
+        </tr>
+
+      </table>
+    </table>
+    <button type="submit"  [disabled]="!form.valid" (click)="addproduct()" class="btn btn-success"> Submit</button>
+    <button type="reset" class="btn btn-danger"> Rest</button>
+  </form>
+
+</section>
+
+<!-- //////////////////////////////////////////////// -->

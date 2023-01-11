@@ -1,0 +1,71 @@
+<div class="container px-3 my-5 clearfix text-white" >
+    <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7);">
+        <div class="card-header" >
+            <h2> Cart</h2>
+            <p>Date : {{orderDate |date : "short"}}</p>
+
+        </div>
+        <div class="card-body text-white">
+            <div class="table-responsive">
+                <table class="table table-bordered m-0 text-white">
+                    <thead>
+                        <tr>
+
+                            <th class="text-center py-3 px-4" style="width: 300px;">Product Name</th>
+                            <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                            <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                            <th class="text-right py-3 px-4" style="width: 50px;">Total</th>
+                            <th class="text-right py-3 px-4" style="width: 100px;">Delete</th>                           
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let item of cartProducts; let index  = index ">
+                            <td class="p-4">
+                                <div class="d-flex">
+                                    <img src="{{item.item.imgURL}}" class="img-fluid" width="50px" height="50px" alt="">
+                                    <h6 class="mt-3 ms-3">{{item.item.name}}</h6>
+                                </div>
+                            </td>
+                            <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}}</td>
+                            <td class="align-middle p-4 d-flex">
+                                <button class="btn btn-success" (click)="increaseAmount(index)">+</button>
+                                <input type="number" class="form-control text-center w-50" min="1"
+                                    [(ngModel)]="item.quantity" (change)="updateChange()">
+                                <button class="btn btn-danger" (click)="decreaseAmount(index)">-</button>
+                            </td>
+                            <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price *
+                                item.quantity }} EGP</td>
+                            <td class="text-center align-middle px-0"><button class="btn btn-danger"
+                                    (click)="deleteProduct(index)">Delete</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <td>
+                            <h5>Total price</h5>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-large"><strong>{{total}} EGP</strong></div>
+                        </td>
+                    </tfoot>
+
+                </table>
+                <button class="btn btn-warning" (click)="clearCart()">Clear cart</button>
+            </div>
+
+            <div class="float-right">
+                <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3 one">Back to shopping</button>
+                <button type="button" class="btn btn-lg  mt-2 one"
+                    (click)="getDateAndTotal(orderDate,total)">Checkout</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

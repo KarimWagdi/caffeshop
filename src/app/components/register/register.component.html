@@ -1,0 +1,53 @@
+<h1 class="text-center">Sign Up</h1>
+
+<div class="container">
+    <div class="row d-flex aligns-items-center justify-content-center"  >
+      
+        <form #regiForm class="col-4 shadow p-3 mb-5 bg-white rounded "  >
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input #newUserName type="text" id="form2Example1" class="form-control"  required/>
+                <label  class="form-label" for="form2Example1">Username</label>
+            </div>
+            <div class="form-outline mb-4">
+                <input #newUserRoom type="text" id="form2Example1" class="form-control"  required/>
+                <label  class="form-label" for="form2Example1">Room N.</label>
+            </div>
+            <div class="form-outline mb-4">
+                <input #newuUserEmail type="text" id="form2Example1" class="form-control"  required/>
+                <label  class="form-label" for="form2Example1">Email Address</label>
+            </div>
+            <div class="form-outline mb-4">
+                <input  type="text" id="form2Example1" class="form-control"  required/>
+                <input #newuUserImg type="file" name="" id="productImg"(change)="getImgPath($event)">
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input #newUserPassword type="password" id="form2Example2" class="form-control" required />
+                <label  class="form-label" for="form2Example2">Password</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                        <label class="form-check-label" for="form2Example31"> Remember me </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4"(click)="createAccount()">Create Account</button>
+            <!-- routerLinkActive="active" routerLink="/login"  -->
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? <a (click)="backtoLogin()"> Back to Login</a></p>
+            </div>
+        </form>
+       
+    </div>
+</div>
