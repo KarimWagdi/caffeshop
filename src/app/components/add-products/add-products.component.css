@@ -1,3 +1,15 @@
+table{
+    color: white;
+}
+form{
+    padding: 30px;
+}
+h2{
+    color: white;
+}
+*{
+    line-height: 2;
+}
 #addProducts {
 
     display: grid;

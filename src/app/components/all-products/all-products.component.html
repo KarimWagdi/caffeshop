@@ -7,19 +7,19 @@
             <button class="btn one " > 
                 <a class="nav-link text-white" routerLinkActive="active" routerLink="addProduct">Add product</a>
              </button>
-            <table class="table table-striped m-3 text-white">
+            <table class="table  m-3 text-white">
                 <thead>
                     <tr class="text-white">
                         <th class="text-center py-3 px-4" style="width: 300px;">Product</th>
                         <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
                         <th class="text-center py-3 px-4" style="width: 120px;">Image</th>
-                        <th class="text-right py-3 px-4" style="width: 50px;">Actions</th>
+                        <th class="text-center py-3 px-4" style="width: 50px;">Actions</th>
                     </tr>
                 </thead>
                 <tbody >
 
                     <tr *ngFor=" let product of myArray">
-                            <td>{{product.name}}</td>
+                            <td class="text-center">{{product.name}}</td>
                             <td>{{product.price}} L.E</td>
                             <td><img src="{{product.imgURL}}" alt="" srcset=""> </td>
                             <td class="d-flex flex-column  text-center ">
